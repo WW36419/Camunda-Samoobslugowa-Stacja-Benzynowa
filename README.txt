@@ -23,27 +23,6 @@ Uruchamianie Camunda Operate (z Camunda 8 Run)
  - hasło: demo
 
 
-Odpalenie projektu (przez Camunda Modeler):
-
-1. Naciśnij ikonę rakiety w Camunda Modeler i ustaw:
- - Target: Camunda 8 Self-Managed
- - Cluster endpoint: http://localhost:26500
- - Authentication: None
- Po ustawieniu naciśnij "Deploy"
-
-2. Naciśnij ikonę strzałki i napisz w "Variables":
-{
-"kwota_wstepna": 150,
-"karta": true,
-"kupon": true,
-"potwierdzenie": "paragon"
-}
- ... i później naciśnij "Start"
-
-3. Otwórz projekt "stacja-benzynowa" w IntelliJ IDEA, otwórz terminal i wpisz "mvn spring-boot:run"
-
-4. Na stronie Camunda Operate wyszukaj odpalony proces w zakładcę "Processes"
-
-
-Jakby coś się działo nie tak, możesz się ze mną skontaktować!
-Jak pracujesz nad modelem i czegoś nie wiesz lub wpadłeś na problem, możesz skorzystać z Camunda Docs AI na stronie Camunda 8 Docs (https://docs.camunda.io/docs/guides/)
+Odpalenie projektu:
+1. Otwórz projekt "stacja-benzynowa" w IntelliJ IDEA, otwórz terminal i wpisz "mvn spring-boot:run".
+2. Na stronie Camunda Operate wyszukaj odpalony proces w zakładcę "Processes".

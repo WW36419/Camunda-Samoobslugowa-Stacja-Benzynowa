@@ -1,0 +1,13 @@
+io\camunda\demo\stacja_benzynowa\TankujPaliwoWorker.class
+io\camunda\demo\stacja_benzynowa\ZalozBlokadeWorker.class
+io\camunda\demo\stacja_benzynowa\WybierzRodzajPaliwaWorker.class
+io\camunda\demo\stacja_benzynowa\PobierzZaplateWorker.class
+io\camunda\demo\stacja_benzynowa\WlozLojalnosciowaWorker.class
+io\camunda\demo\stacja_benzynowa\WprowadzKwoteWorker.class
+io\camunda\demo\stacja_benzynowa\ZapytajOPotwierdzenieWorker.class
+io\camunda\demo\stacja_benzynowa\WydrukujParagonWorker.class
+io\camunda\demo\stacja_benzynowa\WydrukujFaktureWorker.class
+io\camunda\demo\stacja_benzynowa\StacjaBenzynowaApplication.class
+io\camunda\demo\stacja_benzynowa\ZblizKarteWorker.class
+io\camunda\demo\stacja_benzynowa\ZwrocKwoteWorker.class
+io\camunda\demo\stacja_benzynowa\WyslijObliczonaKwoteWorker.class

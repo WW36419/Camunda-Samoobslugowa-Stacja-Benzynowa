@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" id="punkty" name="Punkty_DMN" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.28.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.6.0">
+  <decision id="punkty_dmn" name="Zdobyte punkty">
+    <informationRequirement id="InformationRequirement_1gmwekd">
+      <requiredInput href="#InputData_1d06xh7" />
+    </informationRequirement>
+    <informationRequirement id="InformationRequirement_0gxd2jw">
+      <requiredInput href="#InputData_1qwavii" />
+    </informationRequirement>
+    <decisionTable id="DecisionTable_1k0nm9q">
+      <input id="Input_1" label="Rodzaj Paliwa" biodi:width="150">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text>rodzaj_paliwa</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1jvzn35" label="Litry zatankowanego paliwa" biodi:width="150">
+        <inputExpression id="LiteralExpression_1hfesfz" typeRef="number">
+          <text>litry_zatankowane</text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="Zdobyte punkty" name="zdobyte_punkty" typeRef="number" />
+      <rule id="DecisionRule_07aopg1">
+        <inputEntry id="UnaryTests_19yo24l">
+          <text>"ON"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_17opkp2">
+          <text>&gt;30</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_08ml7oz">
+          <text>60</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0qtm170">
+        <inputEntry id="UnaryTests_0kru54f">
+          <text>"ON"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_11i7wio">
+          <text>[20..30]</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1bktr65">
+          <text>25</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1sovipz">
+        <inputEntry id="UnaryTests_0mhp479">
+          <text>"98"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1h1owxm">
+          <text>&gt;30</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_15patw5">
+          <text>75</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0llyabv">
+        <inputEntry id="UnaryTests_14a819k">
+          <text>"98"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_013uy75">
+          <text>[20..30]</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0ihvagh">
+          <text>30</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0btknvc">
+        <inputEntry id="UnaryTests_0g2iw41">
+          <text>"95"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0m0rtj9">
+          <text>&gt;30</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0qin1ez">
+          <text>50</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1idtd6p">
+        <inputEntry id="UnaryTests_03fcptf">
+          <text>"95"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0iku521">
+          <text>[20..30]</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0elx24a">
+          <text>20</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0idra89">
+        <inputEntry id="UnaryTests_1fqsb6j">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_05dphz8">
+          <text>&lt;20</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0x9h6qw">
+          <text>0</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <inputData id="InputData_1d06xh7" name="Rodzaj paliwa" />
+  <inputData id="InputData_1qwavii" name="Liczba zatankowanych litrów" />
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="punkty_dmn">
+        <dc:Bounds height="80" width="180" x="330" y="100" />
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="DMNShape_0dq26jo" dmnElementRef="InputData_1d06xh7">
+        <dc:Bounds height="45" width="125" x="167" y="267" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_16rkx6w" dmnElementRef="InformationRequirement_1gmwekd">
+        <di:waypoint x="230" y="267" />
+        <di:waypoint x="390" y="200" />
+        <di:waypoint x="390" y="180" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNShape id="DMNShape_1rczuz3" dmnElementRef="InputData_1qwavii">
+        <dc:Bounds height="45" width="125" x="557" y="267" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_0nvx75x" dmnElementRef="InformationRequirement_0gxd2jw">
+        <di:waypoint x="620" y="267" />
+        <di:waypoint x="450" y="200" />
+        <di:waypoint x="450" y="180" />
+      </dmndi:DMNEdge>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

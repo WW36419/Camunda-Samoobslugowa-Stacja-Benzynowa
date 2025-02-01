@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" id="Definitions_1aarknu" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.28.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.6.0">
+  <decision id="ceny_paliwa_dmn" name="Cena paliwa">
+    <informationRequirement id="InformationRequirement_0uw42lh">
+      <requiredInput href="#InputData_1v63zpf" />
+    </informationRequirement>
+    <decisionTable id="DecisionTable_095s0j0">
+      <input id="Input_1" label="Rodzaj paliwa" biodi:width="160">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text>rodzaj_paliwa</text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="Cena paliwa" name="cena_paliwa" typeRef="number" biodi:width="150" />
+      <rule id="DecisionRule_17uwfww">
+        <inputEntry id="UnaryTests_1b4ini3">
+          <text>"ON"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1egrb90">
+          <text>6.19</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1amhbtx">
+        <inputEntry id="UnaryTests_1oc07ax">
+          <text>"98"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_10vwq03">
+          <text>6.39</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_05am7ht">
+        <inputEntry id="UnaryTests_12x1e3d">
+          <text>"95"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_049x7md">
+          <text>6.09</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <inputData id="InputData_1v63zpf" name="Rodzaj paliwa" />
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="ceny_paliwa_dmn">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="DMNShape_0i98qjj" dmnElementRef="InputData_1v63zpf">
+        <dc:Bounds height="45" width="125" x="187" y="337" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_1tga17q" dmnElementRef="InformationRequirement_0uw42lh">
+        <di:waypoint x="250" y="337" />
+        <di:waypoint x="250" y="200" />
+        <di:waypoint x="250" y="180" />
+      </dmndi:DMNEdge>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>
